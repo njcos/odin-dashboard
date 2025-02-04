@@ -19,23 +19,27 @@ body{
 
 .sidebar {
     grid-area: 1 / 1 / 7 / 1;
-    padding-top: 2rem;
-    padding-left: 3rem;
+    padding-left: 1.5rem;
     padding-right: 3rem;
+    padding-top: 1.3rem;
     display: grid;
-    grid-template-rows: 1fr, 6fr;
+    grid-template-rows: 3rem;, 2fr;
     background-color: #234553;
     color: white;
+    gap: 1.5rem;
 }
 
 .header {
     grid-area: 1 / 2 / 2 / 3;
-    border: 3px solid red;
 }
 
 .content {
     grid-area: 2 / 2 / 7 / 3;
-    border: 3px solid green;
+    background-color:rgb(243, 244, 243);
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 1rem;
+    padding: 2rem;
 }
 
 .dashboard-image {
@@ -47,21 +51,26 @@ body{
     gap: .75rem;
     grid-row-start: 1;
     grid-row-end: 2;
+
+
 }
 
 .nav {
     grid-row-start: 2;
     grid-row-end: 3;
     display: grid;
-    grid-template-rows: 1fr, 1fr;
-    gap: 3rem;
+    grid-template-rows: 18rem 1fr;
+    gap: 2rem;
 }
 
 .navlist {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 3rem);
+    grid-row-start: 1;
+    grid-row-end: 2;
+
 
 }
 
@@ -69,6 +78,8 @@ li{
     list-style: none;
     display: flex;
     gap: 1rem;
+    display: flex;
+    align-items: center;
 
 }
 
@@ -87,7 +98,9 @@ li h4{
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 3rem);
+    grid-row-start: 2;
+    grid-row-end: 3;
 
 
 }
@@ -137,4 +150,185 @@ input[type="search"]{
     grid-template-columns: 1fr 1fr 3fr;
     gap: 1rem;
     padding-right: 1rem;
+}
+.username-small h4 {
+    white-space: nowrap;
+}
+
+.avatar-large{
+    width: 5rem;
+    border-radius: 100%;
+}
+
+.greeting{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.greeting h6{
+    padding: 0;
+    margin: 0;
+}
+.greeting h4 {
+    padding: 0;
+    margin: 0;
+}
+.info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    grid-column: 1 / 2;
+}
+
+.buttons{
+    justify-self: end;
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+ 
+
+}
+
+.buttons button {
+    border: none;
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    background-color: #234553;
+    color: white;
+    font-weight: 800;
+    transition: background-color .15s ease-in-out;
+
+
+}
+
+.buttons button:hover{
+    background-color:rgb(63, 117, 141);
+    transition: background-color .15s ease-in-out;
+}
+
+.bottomline {
+    display: grid; 
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-rows: repeat(3, 21.6rem);
+    gap: 1.5rem;
+    overflow: scroll;
+}
+
+.card {
+    background-color: white;
+    width:
+    padding: 2rem;
+    border-radius: 1em;
+    border-left: 10px solid #234554;
+    display: grid;
+    grid-template-rows: (auto-fit, minmax(1rem, 1fr));
+    box-shadow: 0px 5px 2px rgba(2, 2, 2, 0.02);
+    padding: 2rem;
+
+}
+
+.card .title{
+    margin: 0;
+    padding: 0;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.card .paragraph {
+    margin: 0;
+    padding-top: 1rem;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.card .symbols {
+    margin: 0;
+    padding-top: 1rem;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    align-self: end;
+    justify-self: end;
+}
+
+.symbols img{
+    width: 1rem;
+}
+
+.side-cards{
+    display: grid;
+    grid-template-rows: repeat(2, 0fr);
+    gap: 1.75rem;
+}
+
+.side-card h3 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1rem;
+}
+
+.sidecard {
+    background-color: white;
+    width: 20rem;
+    padding: 2rem;
+    border-radius: 1em;
+    border-left: 10px solid #234554;
+    display: grid;
+    box-shadow: 0px 5px 2px rgba(2, 2, 2, 0.02);
+
+}
+
+.anounce-info h4{
+    margin: 0;
+    padding: 0;
+    font-size: .75rem;
+}
+
+.announce-p{
+    font-size: .8rem;
+}
+
+.anounce-info{
+    border-bottom: 1px solid black;
+    margin-bottom: 12px;
+}
+
+.person{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+}
+
+.person h5, p{
+    margin: 0;
+    padding: 0;
+}
+
+.person h5 {
+    grid-area: 1 / 2 / 2 / 3;
+    justify-self: start;
+    align-self: end;
+}
+.person p {
+    grid-area: 2 / 2 / 3 / 3;
+    justify-self: start;
+    align-self: start;
+}
+
+.person img {
+    width: 5rem;
+    border-radius: 100%;
+    border: 1px solid black;
+    grid-area: 1 / 1 / 3 / 1
 }
